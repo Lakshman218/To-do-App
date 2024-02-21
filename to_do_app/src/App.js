@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(toDos));
-  }, [toDos]); // useEffect to update local storage whenever todos changes
+  }, [toDos]); // useEffect to update local storage whenever todos changes (deletion)
 
   const handledelete = (id) => {
     setTodos(toDos.filter((obj) => obj.id !== id))
